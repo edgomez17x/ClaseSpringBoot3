@@ -2,10 +2,8 @@ package med.voll.api.controllers;
 
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
-import med.voll.api.model.Medico;
-import med.voll.api.records.*;
-import med.voll.api.repository.MedicoRepository;
-import org.hibernate.annotations.Parameter;
+import med.voll.api.domain.direccion.DireccionRec;
+import med.voll.api.domain.medico.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -15,7 +13,6 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import java.net.URI;
-import java.util.List;
 
 @RestController
 @RequestMapping("/medicos")
