@@ -34,6 +34,12 @@ public class Paciente {
         activo = true;
     }
 
+    public Paciente(String nombre, String email, String documento) {
+        this.nombre = nombre;
+        this.email = email;
+        this.documento = documento;
+    }
+
     public Long getId() {
         return id;
     }

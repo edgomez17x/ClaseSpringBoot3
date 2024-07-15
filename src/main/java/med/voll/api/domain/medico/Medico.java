@@ -37,6 +37,13 @@ public class Medico {
         this.activo = true;
     }
 
+    public Medico(String nombre, String email, String documento, Especialidad especialidad) {
+        this.nombre = nombre;
+        this.email = email;
+        this.documento = documento;
+        this.especialidad = especialidad;
+    }
+
     public String getNombre() {
         return nombre;
     }
