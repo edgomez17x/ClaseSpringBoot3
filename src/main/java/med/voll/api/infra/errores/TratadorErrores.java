@@ -21,6 +21,11 @@ public class TratadorErrores {
         return ResponseEntity.badRequest().body(fieldError);
     }
 
+    @ExceptionHandler(ValidacionDeIntegridad.class)
+    public ResponseEntity<Object> tratarErrorValidacionNegocio(ValidacionDeIntegridad vi){
+        return ResponseEntity.badRequest().body(vi.getMessage());
+    }
+
     private record ErrorValidacionRec(
             String campo, String error
     ){
